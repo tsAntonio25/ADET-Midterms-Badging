@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_badging/pages/bottomnav.dart';
 import 'package:flutter_badging/pages/login.dart';
 
 void main() {
@@ -14,9 +15,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'ADET Midterms Badging',
       theme: ThemeData(
-        colorScheme: .fromSeed(seedColor: const Color.fromARGB(255, 25, 25, 25)),
+        colorScheme: .fromSeed(seedColor: const Color.fromARGB(255, 38,38,38)),
+        fontFamily: 'Alef'
       ),
-      home: Login(),
+      home: Login(), // pang testing
     );
   }
 }

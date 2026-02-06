@@ -24,7 +24,7 @@ class CustomButton extends StatelessWidget {
         backgroundColor: btnColor,
         padding: EdgeInsets.symmetric(horizontal: 64, vertical: 16)),
       onPressed: onPressed,
-      child: Text(text, style: TextStyle(color: txtbtnColor)),
+      child: Text(text, style: TextStyle(color: txtbtnColor, fontFamily: 'Varela')),
     );
   }
 }

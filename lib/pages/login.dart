@@ -101,9 +101,9 @@ class Login extends StatelessWidget {
     return CustomInputText(
       label: 'E-mail',
       controller: _emailController,
-      labelColor: Colors.amber,
-      borderColor: Colors.amber,
-      iconlabel: Icon(Icons.email, color: Colors.amber),
+      labelColor: Color.fromARGB(255, 230,198,109),
+      borderColor: Color.fromARGB(255, 230,198,109),
+      iconlabel: Icon(Icons.email, color: Color.fromARGB(255, 230,198,109)),
       obscureText: false,
     );
   }
@@ -113,9 +113,9 @@ class Login extends StatelessWidget {
     return CustomInputText(
       label: 'Password',
       controller: _passController,
-      labelColor: Colors.amber,
-      borderColor: Colors.amber,
-      iconlabel: Icon(Icons.lock, color: Colors.amber),
+      labelColor: Color.fromARGB(255, 230,198,109),
+      borderColor: Color.fromARGB(255, 230,198,109),
+      iconlabel: Icon(Icons.lock, color: Color.fromARGB(255, 230,198,109)),
       obscureText: true,
     );
   }
@@ -151,7 +151,7 @@ class Login extends StatelessWidget {
   // login button
   Widget _loginBtn(BuildContext context) {
     return CustomButton(
-      btnColor: Colors.amber,
+      btnColor: Color.fromARGB(255, 230,198,109),
       txtbtnColor: Colors.white,
       text: 'LOGIN',
       onPressed: () {
@@ -195,7 +195,7 @@ class Login extends StatelessWidget {
       padding: const EdgeInsets.all(16),
 
       decoration: BoxDecoration(
-        color: const Color.fromARGB(255, 35, 35, 35),
+        color: const Color.fromARGB(255, 40,40,40),
         borderRadius: BorderRadius.circular(16),
       ),
 
