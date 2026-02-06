@@ -1,4 +1,4 @@
-# flutter_badging
+# Daydream Co., Ltd. Intranet for Employees
 
 A new Flutter project.
 
