@@ -12,15 +12,16 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget{
       automaticallyImplyLeading: false,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(
-          bottom: Radius.circular(16)
+          bottom: Radius.circular(12)
         )
       ),
-      title: Row(
+      title: Padding(padding: const EdgeInsetsGeometry.only(top: 10),
+      child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
           Image.asset(
             'assets/images/Baekilmong_Logo.png',
-            height: 60,
+            height: 50,
             fit: BoxFit.contain),
 
             const SizedBox(width: 10),
@@ -31,7 +32,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget{
               ),
             )
         ],
-      )
+      ),)
     
     );
   }

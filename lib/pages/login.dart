@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_badging/pages/dashboard.dart';
+import 'package:flutter_badging/pages/bottomnav.dart';
 import 'package:flutter_badging/widgets/customBtn.dart';
 import 'package:flutter_badging/widgets/customInputTxt.dart';
 
@@ -167,7 +167,7 @@ class Login extends StatelessWidget {
           // go to nav if equal
           Navigator.of(
             context,
-          ).push(MaterialPageRoute(builder: (context) => Dashboard()));
+          ).push(MaterialPageRoute(builder: (context) => BottomNavigation()));
         } else {
           // display error below password input with red color
           _errLogin.value = 'Invalid email or password.';
