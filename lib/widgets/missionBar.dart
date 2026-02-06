@@ -5,6 +5,7 @@ class MissionBar extends StatefulWidget {
   final String darknessName;
   final String entrySite;
   final String desc;
+  final Color colorBrdr;
 
   const MissionBar({
     super.key,
@@ -12,6 +13,7 @@ class MissionBar extends StatefulWidget {
     required this.darknessName,
     required this.entrySite,
     required this.desc,
+    required this.colorBrdr,
   });
 
   @override
@@ -27,11 +29,8 @@ class _MissionBarState extends State<MissionBar> {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Container(
-            width: 8,
-            color: const Color.fromARGB(255, 234, 29, 33), // Your theme red
-          ),
-          
+          Container(width: 8, color: widget.colorBrdr),
+
           Expanded(
             child: InkWell(
               onTap: () => setState(() => _isExpanded = !_isExpanded),
@@ -40,10 +39,29 @@ class _MissionBarState extends State<MissionBar> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(widget.idCode, style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 20)),
-                    Text(widget.darknessName, style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15)),
-                    Text(widget.entrySite, style: const TextStyle(fontWeight: FontWeight.w300, fontStyle: FontStyle.italic, fontSize: 15)),
-                    
+                    Text(
+                      widget.idCode,
+                      style: const TextStyle(
+                        fontWeight: FontWeight.w800,
+                        fontSize: 20,
+                      ),
+                    ),
+                    Text(
+                      widget.darknessName,
+                      style: const TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 15,
+                      ),
+                    ),
+                    Text(
+                      widget.entrySite,
+                      style: const TextStyle(
+                        fontWeight: FontWeight.w300,
+                        fontStyle: FontStyle.italic,
+                        fontSize: 15,
+                      ),
+                    ),
+
                     if (_isExpanded) ...[
                       const SizedBox(height: 10),
                       Text(widget.desc, style: const TextStyle(fontSize: 12)),

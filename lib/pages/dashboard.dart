@@ -119,6 +119,7 @@ class Dashboard extends StatelessWidget {
             entrySite: 'Happiness Land Apartment Security Office',
             desc:
                 'This darkness commonly arises in buildings with a single elevator, particularly when the elevator is frequently out of order or displays a maintenance sign. If an individual plays rock-paper-scissors with their reflection inside the elevator and wins, the reflection will answer any question truthfully',
+            colorBrdr: Color.fromARGB(255, 234,29,33),
           ),
         ),
         Card(
@@ -131,6 +132,7 @@ class Dashboard extends StatelessWidget {
             entrySite: 'Yudalsan, Mokpo',
             desc:
                 'This darkness manifests when three hikers ascend Yudalsan at approximately 3:00 a.m. Affected individuals experience auditory and visual hallucinations, most commonly the voices of deceased loved ones calling from off-trail and urging them to remain on the mountain.',
+            colorBrdr: Color.fromARGB(255, 234,29,33),
           ),
         ),
         Card(
@@ -143,6 +145,7 @@ class Dashboard extends StatelessWidget {
             entrySite: 'Wonderful Daycare Childcare Room',
             desc:
                 'This darkness manifests as a crying ghost child who issues mundane “requests” that grow increasingly illogical over time. Requests must be fulfilled without question, and at no point should the employee acknowledge that the child is dead.',
+            colorBrdr: Color.fromARGB(255, 234,29,33),
           ),
         ),
       ],
