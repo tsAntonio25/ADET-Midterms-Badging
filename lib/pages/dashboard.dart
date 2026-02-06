@@ -118,7 +118,7 @@ class Dashboard extends StatelessWidget {
             darknessName: 'Don’t Look in the Mirror',
             entrySite: 'Happiness Land Apartment Security Office',
             desc:
-                'This darkness commonly arises in buildings with a single elevator, particularly when the elevator is frequently out of order or displays a maintenance sign. If an individual plays rock-paper-scissors with their reflection inside the elevator and wins, the reflection will answer any question truthfully',
+                'This darkness commonly arises in buildings with a single elevator, particularly when the elevator is frequently out of order or displays a maintenance sign. If an individual plays rock-paper-scissors with their reflection inside the elevator and wins, the reflection will answer any question truthfully.',
             colorBrdr: Color.fromARGB(255, 234,29,33),
           ),
         ),
