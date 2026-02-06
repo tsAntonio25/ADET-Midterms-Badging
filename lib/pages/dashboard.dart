@@ -28,7 +28,7 @@ class Dashboard extends StatelessWidget {
   // welcome banner
   Widget _welcomeBanner() {
     return Container(
-      margin: EdgeInsets.only(top: 10),
+      margin: EdgeInsets.symmetric(vertical: 30),
       child: Column(
         children: [
           Text(
@@ -71,7 +71,7 @@ class Dashboard extends StatelessWidget {
   // points container
   Widget _pointsBanner() {
   return Container(
-    margin: const EdgeInsets.symmetric(vertical: 15),
+    margin: const EdgeInsets.only(bottom: 30, top: 10),
     padding: const EdgeInsets.all(30),
     decoration: BoxDecoration(
       color: Color.fromARGB(255, 40,40,40),
