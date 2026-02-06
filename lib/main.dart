@@ -15,10 +15,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'ADET Midterms Badging',
       theme: ThemeData(
-        colorScheme: .fromSeed(seedColor: const Color.fromARGB(255, 38,38,38)),
+        colorScheme: .fromSeed(seedColor: const Color.fromARGB(255, 25, 25, 25)),
         fontFamily: 'Alef'
       ),
-      home: BottomNavigation(), // pang testing
+      home: Login(), // pang testing
     );
   }
 }
