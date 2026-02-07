@@ -33,11 +33,13 @@ class Report extends StatelessWidget {
   // form banner
   Widget _formSubmission() {
     return Container(
-      child: Text(
-        'DARKNESS REPORT SUBMISSION',
-        textAlign: TextAlign.center,
-        style: TextStyle(fontSize: 30, fontWeight: FontWeight.w600),
-      ),
+      child: Padding(padding: EdgeInsetsGeometry.only(top: 20),
+        child: Text(
+          'DARKNESS REPORT SUBMISSION',
+          textAlign: TextAlign.center,
+          style: TextStyle(fontSize: 30, fontWeight: FontWeight.w600),
+        ),
+      )
     );
   }
 
@@ -112,7 +114,7 @@ class Report extends StatelessWidget {
 
               decoration: InputDecoration(
                 // placeholder text
-                hintText: 'Enter the description..',
+                hintText: 'Enter the description...',
 
                 // fill color
                   filled: true,           
@@ -147,7 +149,7 @@ class Report extends StatelessWidget {
             context,
           ).push(MaterialPageRoute(builder: (context) => FeedbackPage()));
         } else {
-          _errSubmit.value = 'Enter all.';
+          _errSubmit.value = 'All fields must be filled out to continue.';
         }
       },
     );
