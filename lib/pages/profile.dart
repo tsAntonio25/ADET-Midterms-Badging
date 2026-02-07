@@ -18,7 +18,13 @@ class Profile extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [_employeeInfo(), Divider(thickness: 3, color: Colors.black,), _pastMissionSection(), _logoutButton(context)],
+              children: [
+                _employeeInfo(),
+                _profileInfo(),
+                Divider(thickness: 3, color: Colors.black),
+                _pastMissionSection(),
+                _logoutButton(context),
+              ],
             ),
           ),
         ),
@@ -39,7 +45,108 @@ class Profile extends StatelessWidget {
 
   // profile
   Widget _profileInfo() {
-    return Container();
+    return Container(
+      margin: EdgeInsets.only(bottom: 30, top: 20),
+      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+      decoration: BoxDecoration(
+        color: Color.fromARGB(255, 40, 40, 40),
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Align(alignment: Alignment.centerRight, child: _logo()),
+          Divider(color: Colors.white),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [_pfp(), _labels(), _values()],
+          ),
+          Align(
+            alignment: Alignment.centerRight,
+            child: Text(
+              'Points: 277,200',
+              style: TextStyle(
+                color: Color.fromARGB(255, 234, 29, 33),
+                fontSize: 20,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  // daydream logo
+  Widget _logo() {
+    return Container(
+      height: 40,
+      width: 40,
+
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage('assets/images/Baekilmong_Logo.png'),
+          fit: BoxFit.contain,
+        ),
+      ),
+    );
+  }
+
+  // profile pic
+  Widget _pfp() {
+    return Container(
+      height: 130,
+      width: 100,
+
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage('assets/images/soleum1.jpg'),
+          fit: BoxFit.contain,
+        ),
+      ),
+    );
+  }
+
+  // labels
+  Widget _labels() {
+    return Container(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text('Name:', style: TextStyle(color: Colors.white, fontSize: 15)),
+          Text('Team:', style: TextStyle(color: Colors.white, fontSize: 15)),
+          Text(
+            'Codename:',
+            style: TextStyle(color: Colors.white, fontSize: 15),
+          ),
+          Text(
+            'Position:',
+            style: TextStyle(color: Colors.white, fontSize: 15),
+          ),
+        ],
+      ),
+    );
+  }
+
+  // values
+  Widget _values() {
+    return Container(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'Kim Soleum',
+            style: TextStyle(color: Colors.white, fontSize: 15),
+          ),
+          Text('D', style: TextStyle(color: Colors.white, fontSize: 15)),
+          Text('Roe Deer', style: TextStyle(color: Colors.white, fontSize: 15)),
+          Text(
+            'Supervisor',
+            style: TextStyle(color: Colors.white, fontSize: 15),
+          ),
+        ],
+      ),
+    );
   }
 
   // past missions
@@ -49,7 +156,7 @@ class Profile extends StatelessWidget {
       children: const <Widget>[
         Card(
           clipBehavior: Clip.antiAlias,
-          shadowColor: Color.fromARGB(255, 157,125,19),
+          shadowColor: Color.fromARGB(255, 157, 125, 19),
           margin: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
           child: MissionBar(
             idCode: 'Qterw-C-1603',
@@ -57,12 +164,12 @@ class Profile extends StatelessWidget {
             entrySite: '',
             desc:
                 'This darkness manifests as a street of operating shops staffed by non-human beings. Individuals entering through the Death Lane App must not close the application under any circumstances.',
-            colorBrdr: Color.fromARGB(255, 157,125,19),
+            colorBrdr: Color.fromARGB(255, 157, 125, 19),
           ),
         ),
         Card(
           clipBehavior: Clip.antiAlias,
-          shadowColor: Color.fromARGB(255, 157,125,19),
+          shadowColor: Color.fromARGB(255, 157, 125, 19),
           margin: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
           child: MissionBar(
             idCode: 'Qterw-()-62',
@@ -70,19 +177,31 @@ class Profile extends StatelessWidget {
             entrySite: '',
             desc:
                 'This darkness occurs if you fall asleep on New Year’s Eve after reading “In the dark shadow.txt”. You will awaken at Sekwang Technical High School at night and be chased by something that is not human until death.',
-            colorBrdr: Color.fromARGB(255, 157,125,19),
+            colorBrdr: Color.fromARGB(255, 157, 125, 19),
           ),
         ),
-        
       ],
     );
   }
 
   // past missions section
   Widget _pastMissionSection() {
-    return Column(
+    return Container(
+      margin: EdgeInsets.symmetric(vertical: 10),
+      child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: [Padding(padding: EdgeInsetsGeometry.only(left: 30, top: 20), child: Text("PAST MISSIONS", style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16),)),  _pastMissions()]);
+      children: [
+        Padding(
+          padding: EdgeInsetsGeometry.only(left: 30, top: 20),
+          child: Text(
+            "PAST MISSIONS",
+            style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
+          ),
+        ),
+        _pastMissions(),
+      ],
+    ),
+    );
   }
 
   // logout button
@@ -90,15 +209,15 @@ class Profile extends StatelessWidget {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 60, vertical: 30),
       child: CustomButton(
-      btnColor: Color.fromARGB(255, 234, 29, 33),
-      txtbtnColor: Colors.white,
-      text: "LOG OUT",
-      onPressed: () {
-        Navigator.of(
-          context,
-        ).push(MaterialPageRoute(builder: (context) => Login()));
-      },
-    ),
+        btnColor: Color.fromARGB(255, 234, 29, 33),
+        txtbtnColor: Colors.white,
+        text: "LOG OUT",
+        onPressed: () {
+          Navigator.of(
+            context,
+          ).push(MaterialPageRoute(builder: (context) => Login()));
+        },
+      ),
     );
   }
 }

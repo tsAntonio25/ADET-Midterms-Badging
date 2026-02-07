@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: .fromSeed(seedColor: const Color.fromARGB(255, 25, 25, 25)),
         fontFamily: 'Alef'
       ),
-      home: Login(), // pang testing
+      home: BottomNavigation(), // pang testing
     );
   }
 }
