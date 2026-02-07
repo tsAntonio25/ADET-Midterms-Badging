@@ -16,7 +16,7 @@ class BottomNavigation extends StatefulWidget {
 class _BottomNavState extends State<BottomNavigation> {
   int _currInd = 0;
 
-  final List<Widget> _pages = const [Dashboard(), Report(), Profile()];
+  final List<Widget> _pages = [Dashboard(), Report(), Profile()];
 
   // widget
   @override

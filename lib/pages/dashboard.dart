@@ -154,8 +154,11 @@ class Dashboard extends StatelessWidget {
 
   // mission section
   Widget _missionSection() {
-    return Column(
+    return Container(
+      margin: EdgeInsets.only(bottom: 20),
+      child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: [Padding(padding: EdgeInsetsGeometry.only(left: 30, top: 20), child: Text("MISSIONS", style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16),)),  _missions()]);
+      children: [Padding(padding: EdgeInsetsGeometry.only(left: 30, top: 20), child: Text("MISSIONS", style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16),)),  _missions()]),
+    );
   }
 }
